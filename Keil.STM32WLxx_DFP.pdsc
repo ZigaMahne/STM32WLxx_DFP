@@ -17,6 +17,7 @@
       Active development ...
       Package Description:
       - Added templates conditions (to filter single-core or dual-core devices)
+      - Added access port attributes for dual-core STM32WL54/55 devices
     </release>
     <release version="1.2.0" date="2024-02-02">
       Updated Pack to STM32Cube_FW_WL Firmware Package version V1.3.0 (using HAL Drivers V1.3.0).
@@ -63,8 +64,8 @@
       <subFamily DsubFamily="STM32WL55">
         <processor Pname="CM4"  Dcore="Cortex-M4"  DcoreVersion="r0p1" Dmpu="MPU"    Dfpu="NO_FPU" Ddsp="DSP"    Dendian="Little-endian" Dclock="48000000"/>
         <processor Pname="CM0P" Dcore="Cortex-M0+" DcoreVersion="r0p1" Dmpu="NO_MPU" Dfpu="NO_FPU" Ddsp="NO_DSP" Dendian="Little-endian" Dclock="48000000"/>
-        <debug Pname="CM4"  svd="CMSIS/SVD/STM32WL5x_CM4.svd"/>
-        <debug Pname="CM0P" svd="CMSIS/SVD/STM32WL5x_CM0P.svd"/>
+        <debug Pname="CM4"  __ap="0" svd="CMSIS/SVD/STM32WL5x_CM4.svd"/>
+        <debug Pname="CM0P" __ap="1" svd="CMSIS/SVD/STM32WL5x_CM0P.svd"/>
         <compile Pname="CM4"  define="STM32WL55xx" Pdefine="CORE_CM4"/>
         <compile Pname="CM0P" define="STM32WL55xx" Pdefine="CORE_CM0PLUS"/>
 
@@ -133,8 +134,8 @@ The Cortex-M0+ processor is an entry-level 32-bit Arm Cortex processor.
       <subFamily DsubFamily="STM32WL54">
         <processor Pname="CM4"  Dcore="Cortex-M4"  DcoreVersion="r0p1" Dmpu="MPU"    Dfpu="NO_FPU" Ddsp="DSP"    Dendian="Little-endian" Dclock="48000000"/>
         <processor Pname="CM0P" Dcore="Cortex-M0+" DcoreVersion="r0p1" Dmpu="NO_MPU" Dfpu="NO_FPU" Ddsp="NO_DSP" Dendian="Little-endian" Dclock="48000000"/>
-        <debug Pname="CM4"  svd="CMSIS/SVD/STM32WL5x_CM4.svd"/>
-        <debug Pname="CM0P" svd="CMSIS/SVD/STM32WL5x_CM0P.svd"/>
+        <debug Pname="CM4"  __ap="0" svd="CMSIS/SVD/STM32WL5x_CM4.svd"/>
+        <debug Pname="CM0P" __ap="1" svd="CMSIS/SVD/STM32WL5x_CM0P.svd"/>
         <compile Pname="CM4"  define="STM32WL54xx" Pdefine="CORE_CM4"/>
         <compile Pname="CM0P" define="STM32WL54xx" Pdefine="CORE_CM0PLUS"/>
 
